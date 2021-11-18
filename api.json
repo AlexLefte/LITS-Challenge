@@ -1,0 +1,197 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-11-17T20:48:37.918Z",
+  "__export_source": "insomnia.desktop.app:v2021.6.0",
+  "resources": [
+    {
+      "_id": "req_51fa21327826437484be89699aee8ccd",
+      "parentId": "fld_db5125f620de4e17a35f75d8554a5854",
+      "modified": 1637179576307,
+      "created": 1637178482126,
+      "url": "{{ _.baseUrl }}/drink/16984",
+      "name": "Get Recipe By Drink Id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1637178482126,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_db5125f620de4e17a35f75d8554a5854",
+      "parentId": "wrk_bd21118fa3bc4598afad9ebbc90f5dd1",
+      "modified": 1637178475294,
+      "created": 1637178475294,
+      "name": "Recipes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1637178475294,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_bd21118fa3bc4598afad9ebbc90f5dd1",
+      "parentId": null,
+      "modified": 1637100438535,
+      "created": 1637100438535,
+      "name": "Best Workshop",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_793c4ac4df7849c893a74765df3c39e6",
+      "parentId": "fld_0314d86d5af24e7e8ee4195335b8249e",
+      "modified": 1637182080509,
+      "created": 1637100449248,
+      "url": "{{ _.baseUrl }}/drink",
+      "name": "Get Drinks from Ingredients",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "[\n\t\t{ \n\t\t\t\"name\": \"vodka\"\n\t\t},\n\t\t{ \n\t\t\t\"name\": \"gin\"\n\t\t},\n\t  {\n\t\t\t\"name\": \"tequila\"\n\t\t}\n]"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_cf441a0dc857402ea499a9cc53f00d81"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1637104201323.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0314d86d5af24e7e8ee4195335b8249e",
+      "parentId": "wrk_bd21118fa3bc4598afad9ebbc90f5dd1",
+      "modified": 1637105110554,
+      "created": 1637105110554,
+      "name": "Drinks",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1637105110554,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_867b41d362c94079b488407ccc535567",
+      "parentId": "fld_0314d86d5af24e7e8ee4195335b8249e",
+      "modified": 1637182079787,
+      "created": 1637103291993,
+      "url": "{{ _.baseUrl }}/drink",
+      "name": "Get Drinks from Pictures",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "id": "pair_87df9bb2866b44fa99317068c1eddd7b",
+            "name": "pictures",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "/Users/axbg/Desktop/lemon.jpg"
+          },
+          {
+            "id": "pair_02057bf4919b4f59ba26d18be5e58f56",
+            "name": "pictures",
+            "value": "",
+            "description": "",
+            "type": "file",
+            "fileName": "/Users/axbg/Desktop/lime.jpg"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_1d033040624644be8d39de166173ef56"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1637104201273.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_5402cfa637f196f6bafaeb3a605c18f9ba86d599",
+      "parentId": "wrk_bd21118fa3bc4598afad9ebbc90f5dd1",
+      "modified": 1637100515924,
+      "created": 1637100438545,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1637100438545,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_5402cfa637f196f6bafaeb3a605c18f9ba86d599",
+      "parentId": "wrk_bd21118fa3bc4598afad9ebbc90f5dd1",
+      "modified": 1637100438546,
+      "created": 1637100438546,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_e1bffb1583f642c9a97eaf098ccb19d3",
+      "parentId": "wrk_bd21118fa3bc4598afad9ebbc90f5dd1",
+      "modified": 1637100438539,
+      "created": 1637100438539,
+      "fileName": "Best Workshop",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_bd64435f888d4a72b927a8392a756ce8",
+      "parentId": "env_5402cfa637f196f6bafaeb3a605c18f9ba86d599",
+      "modified": 1637100545132,
+      "created": 1637100517188,
+      "name": "Dev",
+      "data": {
+        "baseUrl": "http://localhost:8080/api"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1637100517188,
+      "_type": "environment"
+    }
+  ]
+}
